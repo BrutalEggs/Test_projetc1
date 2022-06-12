@@ -1,0 +1,4 @@
+<div th:if="${not books.isEmpty()}" th:each="book : ${books}">
+        <a th:text="${book.getTitle() + ', ' + book.getAuthor() + ', ' + book.getYear()}">text</a>
+    </div>
+    <p th:if="${books.isEmpty()}" >User did not take books</p>
